@@ -1,0 +1,8 @@
+STORAGE_DRIVER=overlay2
+DEVS="{{ pillar['docker']['storage_devs'] }}"
+VG=vg_dockerpool
+GROWPART=true
+CONTAINER_ROOT_LV_NAME=lv_dockerpool
+CONTAINER_ROOT_LV_MOUNT_PATH=/var/lib/docker
+CONTAINER_ROOT_LV_SIZE=100%FREE
+#WIPE_SIGNATURES=true

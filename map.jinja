@@ -1,0 +1,11 @@
+{% set confmap = salt['grains.filter_by']({
+    'Gentoo': {
+        'pkg': 'app-emulation/docker',
+    },
+    'Debian': {
+    	'pkg': 'docker-compose',
+    },
+    'Redhat': {
+        'pkg': 'docker',
+    },
+}, grain='os_family', default='Redhat') %}
